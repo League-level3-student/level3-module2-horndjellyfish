@@ -8,7 +8,7 @@ public class _00_SortedArrayCheckerTest {
 
 	@Test
 	public void testIntArray() {
-		int[] unsorted = {3, 2, 9, 3, 1, 0};
+		int[] unsorted = {3, 2, 0, 3, 1, 9};
 		int[] sorted = {0, 1, 2, 2, 3, 4};
 		
 		assertFalse(_00_SortedArrayChecker.intArraySorted(unsorted));
@@ -37,7 +37,7 @@ public class _00_SortedArrayCheckerTest {
 	public void stringDoubleArray() {
 		String[] unsorted = {"carrot", "pineapple", "mango", "pear"};
 		String[] sorted = {"apple", "banana", "carrot", "grape"};
-		
+
 		assertFalse(_00_SortedArrayChecker.stringArraySorted(unsorted));
 		assertTrue(_00_SortedArrayChecker.stringArraySorted(sorted));
 	}
