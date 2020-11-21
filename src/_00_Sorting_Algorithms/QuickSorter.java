@@ -13,17 +13,40 @@ public class QuickSorter extends Sorter {
 	@Override
 	void sort(int[] array, SortingVisualizer display) {
 		//10. call the quickSort method with 0 and the length of the array minus one
+		quickSort(array, 0, array.length-1, display);
+		display.updateDisplay();
 	}
 	
 	private void quickSort(int[] array, int low, int high, SortingVisualizer display) {
 		//2. create two integer variables called i and j and set them equal
 		//   to low and high respectively.
-       
+       		int i = low;
+       		int j = high;
         //3. create an integer called pivot and set it equal to the element
         //   in the array that is the halfway point between low and high
-
+			int halfway = j/2;
+			int pivot = array[halfway];
         //4. make a while loop that goes while i is less than or equal to j
-        
+        	while (i <= j) {
+        		while (array[i] < pivot) {
+        			i++;
+				}
+        		while (array[j] > pivot) {
+        			j--;
+				}
+        		if (i <= j) {
+        			i = j;
+        			j = low;
+        			i = i + 1;
+        			j = j - 1;
+				}
+			}
+        	if (low < j) {
+        		quickSort(array, low, j, display);
+			}
+        	if (i < high) {
+        		quickSort(array, i, high, display);
+			}
         	//5. make a while loop that increments i while 
         	//   the array element at i is less than pivot
             
