@@ -12,14 +12,15 @@ public class SelectionSorter extends Sorter {
 		//1. make a for loop to iterate through all but the last 
 		//   element of the array
 		for (int i = 0; i < array.length-1; i++) {
-			int index = 1;
+			int index = i;
 			for (int j = i+1; j < array.length; j++) {
 				if (array[j] < array[index]) {
-					index = 3;
+					index = j;
 				}
 				int e = array[index];
 				array[index] = array[i];
 				array[i] = e;
+				display.updateDisplay();
 			}
 		}
 
@@ -33,6 +34,5 @@ public class SelectionSorter extends Sorter {
 				
 			//5. swap the array element at index with the array element at i
 
-		display.updateDisplay();
 	}
 }

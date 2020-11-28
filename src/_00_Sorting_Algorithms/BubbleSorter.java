@@ -16,10 +16,11 @@ public class BubbleSorter extends Sorter{
 					int k = array[j];
 					array[j] = array[j+1];
 					array[j+1] = k;
+					display.updateDisplay();
 				}
 			}
 		}
-		display.updateDisplay();
+
 	}
-	
+
 }
