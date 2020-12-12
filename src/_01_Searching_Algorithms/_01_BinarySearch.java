@@ -20,8 +20,7 @@ public class _01_BinarySearch {
             //3. create an integer called mid and set it equal
             //   to the half way point between start and end
             int temp = start + end;
-            int halfway = temp / 2;
-            int mid = halfway;
+            int mid = temp / 2;
             //4. if the array element at mid is equal to value
             //   then return mid
             if (array[mid] == value) {

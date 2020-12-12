@@ -1,7 +1,7 @@
 package _01_Searching_Algorithms;
 
 public class _03_ExponentialSearch {
-    _03_ExponentialSearch es = new _03_ExponentialSearch();
+
     // Exponential search is super efficient for large data sets by
     // optimizing the binary search. It, like the binary search, only
     // works with sorted data.
@@ -9,6 +9,7 @@ public class _03_ExponentialSearch {
     //1. Complete the steps in the exponentialSearch method.
     //   We can assume that array is sorted.
     public static int exponentialSearch(int array[], int value) {
+        _01_BinarySearch bs = new _01_BinarySearch();
         // 2. Check if the array element at 0 is the value.
         //    If it is, then return 0.
         if (array[0] == value) {
@@ -41,6 +42,6 @@ public class _03_ExponentialSearch {
         //		the value to be found
 
         //10. return the result
-        return 0;
+        return bs.binarySearch(array, counter / 2, minimum, value);
     }
 }
