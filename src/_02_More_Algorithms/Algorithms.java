@@ -1,8 +1,9 @@
 package _02_More_Algorithms;
 
-import _00_Sorting_Algorithms.BubbleSorter;
+import _00_Sorting_Algorithms.*;
 import _01_Searching_Algorithms._00_LinearSearch;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class Algorithms {
@@ -46,24 +47,42 @@ public class Algorithms {
         return longest;
     }
 
-//    public static boolean containsSOS(List<String> message1) {
-//        String[] arr = new String[message1.size()];
-//        arr = message1.toArray(arr);
-//
-//        if (_00_LinearSearch.linearSearch(arr, "...---...") == -1) {
-//            return false;
-//        }
-//        return true;
-//    }
-
-    public static double sortScores(List<Double> results) {
-
-        return 0;
+    public static boolean containsSOS(List<String> message) {
+        CharSequence s = "... --- ...";
+        return message.contains(s);
     }
 
+    public static List<Double> sortScores(List<Double> results) {
+        Double[] arr = new Double[results.size()];
+        arr = results.toArray(arr);
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = 0; j < arr.length - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    double k = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = k;
+                    results = Arrays.asList(arr);
+                }
+            }
+        }
+        return results;
+    }
 
-
-
+    public static List<String> sortDNA(List<String> sequences) {
+        String[] arr = new String[sequences.size()];
+        arr = sequences.toArray(arr);
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = 0; j < arr.length - 1; j++) {
+                if (arr[i].length() > arr[j].length()) {
+                    String k = arr[j];
+                    arr[j] = arr[i];
+                    arr[i] = k;
+                }
+            }
+        }
+        sequences = Arrays.asList(arr);
+        return sequences;
+    }
 
 
 }

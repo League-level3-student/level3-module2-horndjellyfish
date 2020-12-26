@@ -51,13 +51,13 @@ public class _01_SearchingAndSortingAlgorithms {
 	 * 5. The Morse code for SOS is "... --- ..."
 	 * Create a method that can tell if SOS is contained in a message.
 	 */
-//	@Test
-//	public void testFindString() throws Exception {
-//		List<String> message1 = Arrays.asList(".... . .-. .-. --- / ... --- ... / -.-- .- .-.. .-.. ...".split(" / "));
-//		assertEquals(true, Algorithms.containsSOS(message1));
-//		List<String> message2 = Arrays.asList(".-- .. - .... / - .... . / .-.. .. --. .... - ... / --- ..- - --..-- / .. - .----. ... / .-.. . ... ... / -.. .- -. --. . .-. --- ..- ... / .... . .-. . / .-- . / .- .-. . / -. --- .-- ? / . -. - . .-. - .- .. -. / ..- ... / .. / ..-. . . .-.. / ... - ..- .--. .. -.. / .- -. -.. / -.-. --- -. - .- --. .. --- ..- ... / .... . .-. . / .-- . / .- .-. . / -. --- .-- ? / . -. - . .-. - .- .. -. / ..- ... / .- / -- ..- .-.. .- - - --- --..-- / .- -. / .- .-.. -... .. -. --- --..-- / .- / -- --- ... --.- ..- .. - --- --..-- / -- -.-- / .-.. .. -... .. -.. --- / -.-- . .- .... --..-- / .... . -.-- / -.-- . .- ....".split("/"));
-//		assertEquals(false, Algorithms.containsSOS(message2));
-//	}
+	@Test
+	public void testFindString() throws Exception {
+		List<String> message1 = Arrays.asList(".... . .-. .-. --- / ... --- ... / -.-- .- .-.. .-.. ...".split(" / "));
+		assertEquals(true, Algorithms.containsSOS(message1));
+		List<String> message2 = Arrays.asList(".-- .. - .... / - .... . / .-.. .. --. .... - ... / --- ..- - --..-- / .. - .----. ... / .-.. . ... ... / -.. .- -. --. . .-. --- ..- ... / .... . .-. . / .-- . / .- .-. . / -. --- .-- ? / . -. - . .-. - .- .. -. / ..- ... / .. / ..-. . . .-.. / ... - ..- .--. .. -.. / .- -. -.. / -.-. --- -. - .- --. .. --- ..- ... / .... . .-. . / .-- . / .- .-. . / -. --- .-- ? / . -. - . .-. - .- .. -. / ..- ... / .- / -- ..- .-.. .- - - --- --..-- / .- -. / .- .-.. -... .. -. --- --..-- / .- / -- --- ... --.- ..- .. - --- --..-- / -- -.-- / .-.. .. -... .. -.. --- / -.-- . .- .... --..-- / .... . -.-- / -.-- . .- ....".split("/"));
+		assertEquals(false, Algorithms.containsSOS(message2));
+	}
 
 	/* 6. Write a morse code translator to read the messages. Just kidding! */
 
@@ -71,14 +71,12 @@ public class _01_SearchingAndSortingAlgorithms {
 	}
 
 	/* 8. Sort the DNA sequences by length from shortest to longest. */
-//	@Test
-//	public void testSortStringLength() throws Exception {
-//		List<String> unsortedSequences = Arrays.asList(new String[] { "ATAGCTGATCGTAGCTACGTACGATCG", "CATCGTACATGC", "TATGTGT",
-//				"GCTGATCGTGACTGTAC", "ACTGT" });
-//		List<String> sortedSequences = Arrays.asList(new String[] { "ACTGT", "TATGTGT", "CATCGTACATGC", "GCTGATCGTGACTGTAC",
-//				"ATAGCTGATCGTAGCTACGTACGATCG" });
-//		assertEquals(sortedSequences, Algorithms.sortDNA(unsortedSequences));
-//	}
+	@Test
+	public void testSortStringLength() throws Exception {
+		List<String> unsortedSequences = Arrays.asList(new String[] { "ATAGCTGATCGTAGCTACGTACGATCG", "CATCGTACATGC", "TATGTGT", "GCTGATCGTGACTGTAC", "ACTGT" });
+		List<String> sortedSequences = Arrays.asList(new String[] { "ACTGT", "TATGTGT", "CATCGTACATGC", "GCTGATCGTGACTGTAC", "ATAGCTGATCGTAGCTACGTACGATCG" });
+		assertEquals(sortedSequences, Algorithms.sortDNA(unsortedSequences));
+	}
 
 	/*
 	 * 9. Sort the words in alphabetical order. Your teacher may need to explain compareTo.
