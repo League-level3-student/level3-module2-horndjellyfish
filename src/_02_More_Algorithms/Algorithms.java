@@ -1,6 +1,5 @@
 package _02_More_Algorithms;
 
-import _00_Sorting_Algorithms.*;
 import _01_Searching_Algorithms._00_LinearSearch;
 
 import java.util.Arrays;
@@ -71,17 +70,33 @@ public class Algorithms {
     public static List<String> sortDNA(List<String> sequences) {
         String[] arr = new String[sequences.size()];
         arr = sequences.toArray(arr);
-        for (int i = 0; i < arr.length - 1; i++) {
-            for (int j = 0; j < arr.length - 1; j++) {
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i + 1; j < arr.length; j++) {
                 if (arr[i].length() > arr[j].length()) {
-                    String k = arr[j];
-                    arr[j] = arr[i];
-                    arr[i] = k;
+                    String k = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = k;
                 }
             }
         }
         sequences = Arrays.asList(arr);
         return sequences;
+    }
+
+    public static List<String> sortWords(List<String> words) {
+        String[] arr = new String[words.size()];
+        arr = words.toArray(arr);
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[i].compareTo(arr[j]) > 0) {
+                    String k = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = k;
+                }
+            }
+        }
+        words = Arrays.asList(arr);
+        return words;
     }
 
 
